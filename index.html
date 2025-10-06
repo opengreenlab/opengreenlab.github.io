@@ -23,7 +23,7 @@
       background:radial-gradient(1000px 600px at 80% -10%, rgba(180,230,170,.1), transparent 70%), var(--bg);
       color:var(--text); line-height:1.55;
     }
-    header{position:sticky; top:0; backdrop-filter:saturate(160%) blur(8px); background:linear-gradient(180deg, rgba(14,28,17,.85), rgba(14,28,17,.65)); border-bottom:1px solid var(--line)}
+    header{position:sticky; top:0; backdrop-filter:saturate(160%) blur(8px); background:linear-gradient(180deg, rgba(14,28,17,.85), rgba(14,28,17,.65)); border-bottom:1px solid var(--line); z-index:10}
     .container{max-width:1100px; margin:0 auto; padding:0 20px}
     .nav{display:flex; align-items:center; justify-content:space-between; height:64px}
     .logo{display:flex; gap:10px; align-items:center; font-weight:800; letter-spacing:.2px}
@@ -33,7 +33,7 @@
     .hero{padding:90px 0 40px; text-align:center}
     h1{font-size:clamp(32px,6vw,56px); margin:0 0 16px}
     .subtitle{max-width:780px; margin:0 auto 26px; color:var(--muted)}
-    .btn{padding:12px 18px; border-radius:14px; border:1px solid var(--line); background:linear-gradient(180deg,#1a3a23,#142a1b); color:var(--text); font-weight:600; text-decoration:none}
+    .btn{display:inline-block; padding:12px 18px; border-radius:14px; border:1px solid var(--line); background:linear-gradient(180deg,#1a3a23,#142a1b); color:var(--text); font-weight:600; text-decoration:none}
     .btn:hover{opacity:.9}
     section{padding:40px 0}
     .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px}
@@ -72,19 +72,19 @@
       <h2>Projects</h2>
       <div class="grid">
         <article class="card">
-          <img alt="Food forest view placeholder" />
+          <img alt="View of layered forest garden with trees and herbs" loading="lazy" width="640" height="360" />
           <span class="tag">Forest Garden</span>
           <h3>Food Forest in the Mountains of Monchique</h3>
           <p>A living ecosystem in progress — where trees, herbs, and soil life form a regenerative classroom for all ages.</p>
         </article>
         <article class="card">
-          <img alt="Solar project placeholder" />
+          <img alt="Simple solar cooker with sunlight" loading="lazy" width="640" height="360" />
           <span class="tag">Solar</span>
           <h3>Solar Cookers & Off‑Grid Energy</h3>
           <p>Simple, local ways to capture sunlight for cooking and small power — prototypes for daily self‑reliance.</p>
         </article>
         <article class="card">
-          <img alt="Water systems placeholder" />
+          <img alt="Greywater filter barrels and water flow" loading="lazy" width="640" height="360" />
           <span class="tag">Water</span>
           <h3>Water Cycles & Greywater Systems</h3>
           <p>Understanding how water moves through land and life. DIY filtration, monitoring and creative reuse.</p>
@@ -104,16 +104,17 @@
       <aside class="card">
         <h3>Community Involvement</h3>
         <p>Our workshops invite everyone to co‑create, from neighbours and schools to travellers who wish to reconnect with the earth.</p>
-        <a class="btn" href="#community">Join us</a>
+        <a class="btn" href="https://community.opengreenlab.org" rel="noopener">Visit the Community</a>
       </aside>
     </section>
 
     <section id="community">
       <h2>Community</h2>
-      <p>We’re creating an open space for exchange — a forum where growers, makers, and dreamers connect beyond chat apps.</p>
+      <p>We’re creating an open space for exchange — a community where growers, makers, and dreamers connect beyond chat apps.</p>
       <div class="card">
-        <h3>Forum (coming soon)</h3>
-        <p>Discussions on forest gardening, solar living, water care, and regenerative culture. A calm corner of the web for shared learning.</p>
+        <h3>Join the Discussion</h3>
+        <p>Conversations on forest gardening, solar living, water care, and regenerative culture. A calm corner of the web for shared learning.</p>
+        <p><a class="btn" href="https://community.opengreenlab.org" rel="noopener">Go to community.opengreenlab.org</a></p>
       </div>
     </section>
 
@@ -122,10 +123,10 @@
         <h2>About</h2>
         <p>Open Green Lab Algarve is an independent community initiative based in the mountains of Monchique. We blend ecological design, permaculture, and gentle technology to nurture resilience and creativity. Our aim is to reconnect people with land and each other.</p>
       </div>
-      <aside class="card">
-        <h3>Contact</h3>
-        <p>Email: hello@opengreenlab.org<br>Instagram: <a href="#">@opengreenlab</a></p>
-      </aside>
+        <aside class="card">
+          <h3>Contact</h3>
+          <p>Email: hello@opengreenlab.org<br>Instagram: <a href="#">@opengreenlab</a></p>
+        </aside>
     </section>
   </main>
 
@@ -135,3 +136,4 @@
   <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
 </html>
+
